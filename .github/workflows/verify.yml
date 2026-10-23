@@ -1,0 +1,45 @@
+name: Verify science and documentation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Record the exact checked source
+        run: |
+          mkdir -p audit
+          git rev-parse HEAD > audit/revision.txt
+          git archive --format=zip HEAD -o audit/source.zip
+      - name: Install recorded scientific dependencies
+        run: python -m pip install -r verification/requirements.txt
+      - name: Run scientific checks
+        run: python verification/run_all.py --output audit/results.json
+      - name: Check documentation when the checker is present
+        run: |
+          if test -f verification/audit_documentation.py; then
+            python verification/audit_documentation.py --output audit/documentation.json
+          fi
+      - name: Save reproducibility evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: verification-${{ github.event.pull_request.head.sha || github.sha }}
+          path: audit/
+          retention-days: 30
+          if-no-files-found: error
