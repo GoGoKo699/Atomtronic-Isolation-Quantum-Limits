@@ -85,6 +85,22 @@ from established environmental-feedback, Gaussian-channel and amplifier
 results. The [bibliography](references/references.bib) records primary
 sources. [llms.txt](llms.txt) maps questions to their authoritative pages.
 
+## Learn the project
+
+The single educational anchor is **Weedbrook et al., _Gaussian Quantum
+Information_ (2012)**. Start with the [learning overview](learning/README.md)
+and [source-to-project bridge](learning/WEEDBROOK_BRIDGE.md), which gives
+precise source sections, translates quadrature conventions, and develops
+a complete collection-threshold example. It identifies the proof and
+atomic-physics ingredients supplied by the project rather than the review.
+
+The [30-milestone map](learning/MILESTONES.md) has **13 background and
+17 narrative milestones**. Each has a distinct central question,
+understanding target, earlier dependencies, story role, conceptual
+connection and source pointers. Both phases proceed from local ingredients
+to the complete operational picture. The map is shared learning material,
+independent of any reader's assessment history.
+
 ## Reproduce the checks
 
 Use Python 3.12 and the recorded numerical dependencies:
@@ -100,6 +116,11 @@ the Choi polynomial with exact rational arithmetic, Hamiltonian stability,
 atomic resonance selection and finite-packet accounting. See
 [Verification](verification/README.md) for expected outputs, commands and
 the distinction between finite checks and analytical proofs.
+
+[Documentation verification](verification/DOCUMENTATION.md) covers internal
+links, the milestone dependency map and the separate inspection of actual
+GitHub-rendered mathematics. The verification workflow records the exact
+source revision with fresh results and hosted-page captures.
 
 ## Scope that changes the result
 
