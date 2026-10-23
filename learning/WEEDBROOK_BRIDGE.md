@@ -38,7 +38,7 @@ The review normally orders quadratures mode by mode. The collection proof uses a
 V+\frac{i\Omega}{2}\ge0.
 ```
 
-For a centered one-mode state, mean occupation is $`(\operatorname{Tr}V-1)/2`$. Nonzero first moments add a separate displacement-energy contribution. These conversions prevent a factor-of-two error from moving an apparent entanglement boundary.
+For a centered one-mode state, mean occupation is $`(\mathrm{Tr}V-1)/2`$. Nonzero first moments add a separate displacement-energy contribution. These conversions prevent a factor-of-two error from moving an apparent entanglement boundary.
 
 ## 3. From an atomic scattering experiment to a channel
 

@@ -120,17 +120,17 @@ $`(q_z,q_B,p_z,p_B)`$. For a complex matrix, define its realification by
 ```math
 \mathcal R(H)=
 \begin{pmatrix}
-\operatorname{Re}H&-\operatorname{Im}H\\
-\operatorname{Im}H&\operatorname{Re}H
+\mathrm{Re}H&-\mathrm{Im}H\\
+\mathrm{Im}H&\mathrm{Re}H
 \end{pmatrix}.
 ```
 
 Set
 
 ```math
-L=\operatorname{diag}(\sqrt\eta,1),\qquad
+L=\mathrm{diag}(\sqrt\eta,1),\qquad
 t=LA_{:1},\qquad C=LBB^\dagger L,\qquad
-Z=\operatorname{diag}(1,-1).
+Z=\mathrm{diag}(1,-1).
 ```
 
 The channel's real quadrature matrices are
@@ -154,7 +154,7 @@ where $`\Omega_m=\mathcal R(-iI_m)`$. See
 [Holevo, Eq. (29)](https://arxiv.org/html/0802.0235v1).
 
 Partial transpose on Bob flips $`p_B`$ and has matrix
-$`T=\operatorname{diag}(I_2,Z)`$. Congruence by $`T`$ takes the CP matrix
+$`T=\mathrm{diag}(I_2,Z)`$. Congruence by $`T`$ takes the CP matrix
 of the transposed Gaussian map to
 
 ```math
@@ -174,9 +174,9 @@ U=\frac1{\sqrt2}
 block diagonalizes this matrix into $`M\oplus M_+^*`$, with
 
 ```math
-M=\operatorname{diag}(1,0)-tt^\dagger+C,
+M=\mathrm{diag}(1,0)-tt^\dagger+C,
 \qquad
-M_+=\operatorname{diag}(0,1)+C\ge0.
+M_+=\mathrm{diag}(0,1)+C\ge0.
 ```
 
 The canonical scattering identities reduce the only nonautomatic block to
@@ -289,7 +289,7 @@ For a measurable event $`E`$, its Alice instrument map is
 
 ```math
 \Lambda_E(\rho)=
-\operatorname{Tr}_{L^2(\mu)}
+\mathrm{Tr}_{L^2(\mu)}
 \left[(I_z\otimes P_E)V\rho V^\dagger(I_z\otimes P_E)\right],
 ```
 
@@ -341,13 +341,13 @@ The corrected phase-insensitive channel has signal amplitude
 $`\alpha=t_2+k t_1`$, gain $`g_k=|\alpha|^2`$, and added occupation
 
 ```math
-n_k=C_{22}+|k|^2(C_{11}+1)+2\operatorname{Re}(kC_{12}).
+n_k=C_{22}+|k|^2(C_{11}+1)+2\mathrm{Re}(kC_{12}).
 ```
 
 Subtracting gives the same quadratic form as the converse:
 
 ```math
-g_k-n_k=-M_{22}-M_{11}|k|^2-2\operatorname{Re}(kM_{12}).
+g_k-n_k=-M_{22}-M_{11}|k|^2-2\mathrm{Re}(kM_{12}).
 ```
 
 For $`a=M_{11}>0`$,
@@ -448,7 +448,7 @@ The Gaussian calculation, instrument proof, and monitoring construction
 remain valid. The exact zero-capacity condition is
 
 ```math
-\boxed{M=\operatorname{diag}(1,0)-tt^\dagger+L\mathsf K L\ge0.}
+\boxed{M=\mathrm{diag}(1,0)-tt^\dagger+L\mathsf K L\ge0.}
 ```
 
 In scalar form, write
@@ -480,7 +480,7 @@ The three scalars $`G,R,N`$ no longer determine the exact thermal boundary:
 source noise and complex cross-correlations also enter $`\mathsf K`$.
 
 An independent thermal collection bath of occupation $`n_v`$ adds
-$`\operatorname{diag}((1-\eta)n_v,0)`$ to $`C`$. The same matrix
+$`\mathrm{diag}((1-\eta)n_v,0)`$ to $`C`$. The same matrix
 criterion applies. Consecutive pure-loss stages before Alice's access
 multiply their transmissivities.
 
@@ -495,7 +495,7 @@ C\ge0,\qquad P=I-tt^\dagger+C\ge0.
 ```
 
 It is local-instrument simulable across Alice's first output versus Bob's
-second exactly when $`M=\operatorname{diag}(1,0)-tt^\dagger+C\ge0`$.
+second exactly when $`M=\mathrm{diag}(1,0)-tt^\dagger+C\ge0`$.
 Otherwise heterodyne monitoring and feedforward produce distillable
 entanglement as above.
 
@@ -517,13 +517,13 @@ non-Gaussian auxiliary resources require a different analysis.
 
 | Case | Evaluation | Result |
 |---|---|---|
-| $`\eta=0`$ | $`M=\operatorname{diag}(1,c)`$ | Zero exactly when $`N\ge G`$. |
+| $`\eta=0`$ | $`M=\mathrm{diag}(1,c)`$ | Zero exactly when $`N\ge G`$. |
 | $`R=0`$ | Feasibility gives $`c\ge0`$ and $`M_{12}=0`$ | Zero for every collection efficiency, including one. |
 | $`c=0,R>0`$ | $`\det M=-\eta R`$ | Zero at zero collection; positive for every $`\eta>0`$. |
 | $`c<0`$ | $`M_{22}<0`$ | The direct channel already works for every efficiency. |
 | $`c>0,R>0`$ | $`\eta_{\rm crit}=c/(c+R)`$ | Equality and smaller efficiencies give zero capacity. |
 | $`c=R=0`$ | Both original inequalities hold | Zero for every efficiency; the vacuum canonical model also forces $`G=N=0`$. |
-| $`\eta=1,R=0`$ | $`M=\operatorname{diag}(0,c)`$ | Zero; do not substitute $`0/0`$ into a feedback formula. |
+| $`\eta=1,R=0`$ | $`M=\mathrm{diag}(0,c)`$ | Zero; do not substitute $`0/0`$ into a feedback formula. |
 | Passive device with no negative modes | $`N=0,R=G`$ | Positive exactly when $`G>0`$. |
 
 The corner $`c=R=0`$ forces $`G=0`$ because $`A_{12}=0`$ and

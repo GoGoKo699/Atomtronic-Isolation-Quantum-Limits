@@ -188,7 +188,7 @@ centered conditional state and locally apply the finite-output channel
 
 ```math
 \mathcal C_L(\sigma)=P_L\sigma P_L
-+\operatorname{Tr}[(I-P_L)\sigma]|0\rangle\langle0|,
++\mathrm{Tr}[(I-P_L)\sigma]|0\rangle\langle0|,
 \qquad P_L=\sum_{j=0}^L|j\rangle\langle j|.
 ```
 
@@ -253,8 +253,8 @@ $`D(A_{21}\alpha)`$ on the receiver. The corrections are local across the
 communication cut. Let
 
 ```math
-J_n=(\operatorname{id}\otimes\Psi_1)
-(|\operatorname{TMSV}_n\rangle\langle\operatorname{TMSV}_n|),
+J_n=(\mathrm{id}\otimes\Psi_1)
+(|\mathrm{TMSV}_n\rangle\langle\mathrm{TMSV}_n|),
 ```
 
 with the reference and return held by the sender. Braunstein–Kimble
@@ -275,7 +275,7 @@ contractivity gives
 \|\rho_m^{(n)}-\rho_m\|_1
 \le\sum_{j=1}^m
 \left\|\bigl[(\Psi_1\circ\mathcal T_n-\Psi_1)
-\otimes\operatorname{id}\bigr](\sigma_j)\right\|_1
+\otimes\mathrm{id}\bigr](\sigma_j)\right\|_1
 \longrightarrow0.
 ```
 
@@ -327,10 +327,10 @@ r\sqrt{n(n+1)}&2pn+p^2+\tfrac12&-r(n+p)\\
 \end{pmatrix}.
 ```
 
-The momentum block is $`\operatorname{diag}(-1,1,1)X
-\operatorname{diag}(-1,1,1)`$. After the receiver's partial transpose,
+The momentum block is $`\mathrm{diag}(-1,1,1)X
+\mathrm{diag}(-1,1,1)`$. After the receiver's partial transpose,
 the symplectic eigenvalues are the absolute eigenvalues of
-$`X\operatorname{diag}(-1,1,-1)`$. Its characteristic polynomial is
+$`X\mathrm{diag}(-1,1,-1)`$. Its characteristic polynomial is
 
 ```math
 \lambda^3+(2sn+\tfrac32-s^2)\lambda^2

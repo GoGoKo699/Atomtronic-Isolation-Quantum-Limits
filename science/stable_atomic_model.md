@@ -33,7 +33,7 @@ incoming signal and the idler are vacuum in the central model.
 
 At rotating-frame frequency $`\omega`$, the closed Nambu vector is
 $`v=(a[\omega],b[\omega],c^\dagger[-\omega])^T`$. Its metric is
-$`\mathcal J=\operatorname{diag}(1,1,-1)`$. The last minus sign is the
+$`\mathcal J=\mathrm{diag}(1,1,-1)`$. The last minus sign is the
 commutator of a creation operator. The laboratory idler has positive atom
 number and need not have negative laboratory energy. The conjugate block at
 $`-\omega`$ completes the physical six-dimensional canonical evolution.
@@ -436,7 +436,7 @@ $`D=-iK-\kappa I/2`$ and $`Q=\langle vv^\dagger\rangle`$. The stationary
 vacuum covariance solves
 
 ```math
-DQ+QD^\dagger+\kappa\operatorname{diag}(1,1,0)=0.
+DQ+QD^\dagger+\kappa\mathrm{diag}(1,1,0)=0.
 ```
 
 The intracavity physical occupations are

@@ -76,8 +76,8 @@ normal-occupation matrix $`\mathsf K`$ of the two positive outputs with the
 signal in vacuum. The correct test is
 
 ```math
-M=\operatorname{diag}(1,0)-tt^\dagger+L\mathsf K L\ge0,
-\qquad L=\operatorname{diag}(\sqrt\eta,1),\quad t=LA_{:1}.
+M=\mathrm{diag}(1,0)-tt^\dagger+L\mathsf K L\ge0,
+\qquad L=\mathrm{diag}(\sqrt\eta,1),\quad t=LA_{:1}.
 ```
 
 Thermal source noise and output correlations enter this matrix. Three scalar

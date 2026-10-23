@@ -24,13 +24,15 @@ python -m playwright install chromium
 python verification/capture_hosted_math.py --revision <40-character-commit-sha> --output /tmp/atomtronic-render
 ```
 
-The script opens only pinned pages of this repository. It saves the README, learning overview, bridge, milestone map, model, collection theorem, rate account, scattering inequalities, atomic construction and finite-bandwidth account as actual browser screenshots. It records HTTP status, page headings, renderer counts and visible math-error markers, with additional close-ups of representative equations. Network failures and missing Markdown previews are failures, not successful rendering checks.
+The script opens only pinned pages of this repository. It saves the README, learning overview, bridge, milestone map and all seven scientific pages as actual browser screenshots. It records HTTP status, page headings, renderer counts, GitHub macro-rejection messages, visible alerts and math-error markers, with additional close-ups of representative equations. Network failures and missing Markdown previews are failures, not successful rendering checks. Full-page captures are taken before formula close-ups to avoid hiding the first heading beneath GitHub's sticky file header.
 
-A reviewer must inspect the captures for incorrect symbols, visible source syntax, table collisions, missing figure content and clipping. Math-error-marker detection alone is not sufficient. The browser script neither signs in nor changes GitHub state. Static offline rendering is not substituted for GitHub's own output.
+A reviewer must inspect the captures for incorrect symbols, visible source syntax, table collisions, missing figure content and clipping. Math-error-marker detection alone is not sufficient: GitHub's macro-rejection notices need not use a KaTeX or MathJax error class. The browser script neither signs in nor changes GitHub state. Static offline rendering is not substituted for GitHub's own output.
+
+This repository uses roman text for named operators where the inspected GitHub renderer rejects the operator-name macro. This is a presentation convention for this host, not a restriction on the mathematical operator or a universal TeX rule.
 
 ## Continuous verification and provenance
 
-The [verification workflow](../.github/workflows/verify.yml) runs on pull requests and main updates with read-only repository permissions. It checks the exact PR head or main commit, installs the scientific pins on Python 3.12, runs all five scientific programs, performs the documentation audit, and captures hosted mathematics. Results are saved as a workflow artifact containing:
+The [verification workflow](../.github/workflows/verify.yml) runs on pull requests and main updates with read-only repository permissions. It checks the exact PR head or main commit, installs the scientific pins on Python 3.12, runs all five scientific programs, reproduces the figure byte-for-byte, performs the documentation audit, and captures hosted mathematics. Results are saved as a workflow artifact containing:
 
 - `revision.txt` and `source.zip`: the exact public checked source;
 - `results.json` and `documentation.json`: newly executed checks;

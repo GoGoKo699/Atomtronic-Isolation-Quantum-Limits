@@ -26,6 +26,14 @@ PAGES = (
     "science/scattering_noise.md",
     "science/stable_atomic_model.md",
     "science/finite_bandwidth.md",
+    "science/interpretation.md",
+)
+ERROR_TEXT = (
+    "the following macros are not allowed",
+    "unable to render rich display",
+    "math rendering error",
+    "parseerror:",
+    "undefined control sequence",
 )
 
 
@@ -68,15 +76,30 @@ def main() -> None:
                     page.wait_for_timeout(80)
                 page.wait_for_function("document.fonts.status === 'loaded'", timeout=15000)
                 page.wait_for_timeout(1000)
-                page.evaluate("window.scrollTo(0, 0)")
+                # Reset both document and nested scroll containers. Capture the
+                # full page before locator screenshots can scroll its first
+                # heading behind GitHub's sticky file header.
+                page.evaluate("""() => {
+                    for (const element of document.querySelectorAll('*')) {
+                        if (element.scrollTop) element.scrollTop = 0;
+                        if (element.scrollLeft) element.scrollLeft = 0;
+                    }
+                    window.scrollTo(0, 0);
+                }""")
+                page.wait_for_timeout(250)
                 item["heading"] = body.locator("h1").first.inner_text()
                 item["math_renderer_count"] = body.locator("math-renderer").count()
                 item["katex_count"] = body.locator(".katex").count()
                 item["mathml_count"] = body.locator("math").count()
                 markers = body.locator(".katex-error, mjx-merror, [data-mjx-error]")
                 item["math_error_markers"] = markers.all_text_contents()
+                text = body.inner_text().lower()
+                item["github_error_messages"] = [message for message in ERROR_TEXT if message in text]
+                # GitHub's macro-rejection component is not a KaTeX/mjx error;
+                # inspect visible alert text as well as renderer-specific nodes.
+                item["visible_alerts"] = [alert.inner_text() for alert in body.locator("[role=alert]").all() if alert.is_visible()]
                 item["screenshot"] = name + ".png"
-                body.screenshot(path=str(args.output / item["screenshot"]), animations="disabled")
+                page.screenshot(path=str(args.output / item["screenshot"]), full_page=True, animations="disabled")
                 page.screenshot(path=str(args.output / (name + "-page-top.png")), animations="disabled")
                 formulas = body.locator("math-renderer")
                 count = formulas.count()
@@ -89,8 +112,8 @@ def main() -> None:
                     except Exception as exc:
                         samples.append({"index": number, "capture_error": str(exc)})
                 item["formula_samples"] = samples
-                if item["math_error_markers"]:
-                    raise RuntimeError("Visible math-renderer error markers found")
+                if item["math_error_markers"] or item["github_error_messages"] or item["visible_alerts"]:
+                    raise RuntimeError("GitHub-rendered Markdown contains an error or alert")
                 item["status"] = "CAPTURED"
                 print(f"CAPTURED {path}: {count} math containers", flush=True)
             except Exception as exc:
