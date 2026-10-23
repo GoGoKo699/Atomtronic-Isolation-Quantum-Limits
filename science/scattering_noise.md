@@ -35,7 +35,7 @@ A=\begin{pmatrix}
 \end{pmatrix}.
 ```
 
-Then $`A^\dagger A=\operatorname{diag}(G/R,1)`$, so one idler completes
+Then $`A^\dagger A=\mathrm{diag}(G/R,1)`$, so one idler completes
 the canonical relation with $`BB^\dagger`$ of rank at most one. At
 $`G=R`$ no idler coupling is needed. The occupations are
 
@@ -56,7 +56,7 @@ inequality implies
 ```math
 \begin{aligned}
 (s_1-s_2)^2
-&=\operatorname{Tr}(AA^\dagger)-2|\det A|\\
+&=\mathrm{Tr}(AA^\dagger)-2|\det A|\\
 &\ge x^2+y^2+f^2+b^2-2(xy+fb)\\
 &=(x-y)^2+(f-b)^2.
 \end{aligned}
@@ -89,7 +89,7 @@ r&b&\sqrt{d(1-b)}\\
 -f&r&-\sqrt{d(1+f)}\\
 \sqrt{d(1+f)}&-\sqrt{d(1-b)}&1+d
 \end{pmatrix},\qquad
-SJS^\dagger=J,\quad J=\operatorname{diag}(1,1,-1).
+SJS^\dagger=J,\quad J=\mathrm{diag}(1,1,-1).
 ```
 
 For $`G=1,R=0`$, the two positive output occupations are $`1`$ and $`2`$.
@@ -179,7 +179,7 @@ Let independent vacuum modes $`\boldsymbol e_+`$ enter through $`C`$:
 
 Define $`\ell_j=(CC^\dagger)_{jj}`$ and $`t=R+\ell_1`$.
 The smallest eigenvalue of $`AA^\dagger`$ is at least
-$`1-\operatorname{Tr}(CC^\dagger)`$. Equality of singular-value spectra
+$`1-\mathrm{Tr}(CC^\dagger)`$. Equality of singular-value spectra
 therefore gives $`R+|A_{22}|^2\ge1-\ell_1-\ell_2`$. Combining this with
 $`N=G+|A_{22}|^2+\ell_2-1`$ proves
 

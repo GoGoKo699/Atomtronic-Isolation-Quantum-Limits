@@ -70,7 +70,7 @@ a_{j,f}=\int\frac{d\omega}{2\pi}f(\omega)^*a_j(\omega).
 
 Select output profiles $`g_i(\omega)=e^{i\tau_i\omega}f(\omega)`$, allowing
 a separately calibrated delay at each physical output. Write
-$`P(\omega)=\operatorname{diag}(e^{-i\tau_1\omega},e^{-i\tau_2\omega})`$,
+$`P(\omega)=\mathrm{diag}(e^{-i\tau_1\omega},e^{-i\tau_2\omega})`$,
 $`\widetilde A=P A`$, $`\widetilde B=P B`$, and
 $`\langle X\rangle_f=\int |f|^2X\,d\omega/(2\pi)`$.
 

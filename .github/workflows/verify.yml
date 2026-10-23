@@ -1,0 +1,52 @@
+name: Verify science and documentation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Record the exact checked source
+        run: |
+          mkdir -p audit
+          git rev-parse HEAD > audit/revision.txt
+          git archive --format=zip HEAD -o audit/source.zip
+      - name: Install recorded scientific dependencies
+        run: python -m pip install -r verification/requirements.txt
+      - name: Run scientific checks
+        run: python verification/run_all.py --output audit/results.json
+      - name: Reproduce the committed figure
+        run: |
+          python verification/plot_results.py
+          git diff --exit-code -- figures/rates-and-collection.svg
+      - name: Audit documentation and the learning map
+        run: python verification/audit_documentation.py --output audit/documentation.json
+      - name: Install the hosted-render inspection browser
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Capture actual GitHub-rendered mathematics
+        run: python verification/capture_hosted_math.py --revision "$(git rev-parse HEAD)" --output audit/render
+      - name: Save reproducibility evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: verification-${{ github.event.pull_request.head.sha || github.sha }}
+          path: audit/
+          retention-days: 30
+          if-no-files-found: error
