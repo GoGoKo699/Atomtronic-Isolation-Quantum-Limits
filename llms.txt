@@ -1,0 +1,55 @@
+# Atomtronic Isolation Quantum Limits
+
+> Exact accessible-channel boundary and quantum-rate limits for a linear
+> atomtronic scatterer with two positive ports, inaccessible idlers, and a
+> source-collected return. The complete account is organized by topic.
+
+## Entry and story
+- [README](README.md): principal results, example, reading routes and contact.
+- [Model](science/model.md): modes, parties, capacities, assumptions and claims.
+- [Interpretation](science/interpretation.md): what classical isolation
+  certifies, experimental calibration, resources and changed interfaces.
+
+## Questions and authoritative answers
+- When does every protocol fail, including non-Gaussian adaptive protocols?
+  [Collection boundary](science/collection_boundary.md): exact condition,
+  infinite-dimensional sender instrument, adversary model, finite-energy
+  achievability, thermal extension and degenerate cases.
+- How do rates scale with reverse power?
+  [Communication rates](science/communication_rates.md): reduced-channel
+  quadratic upper envelope, ideal-return Theta(R) family, bounded-energy
+  protocol and full-channel logarithmic-negativity proof.
+- What does commutator preservation require? Can another port evade it?
+  [Scattering and noise](science/scattering_noise.md): receiver floor, sharp
+  positive-output noise sum, source-noise tradeoff and additional-port bound.
+- Is there an atomic Hamiltonian and is it stable?
+  [Stable atomic model](science/stable_atomic_model.md): scattering, ring
+  collisions, drive phases, pump/reference/port assumptions and atom flux.
+- What changes for a finite-duration pulse?
+  [Finite bandwidth](science/finite_bandwidth.md): whole-band impossibility,
+  temporal auxiliaries, corrected reverse resource and finite-packet witness.
+
+## Attribution and reproduction
+- [Related work](references/RELATED_WORK.md): established tools, direct
+  environmental-feedback precedent, interface comparisons and priority limits.
+- [Bibliography](references/references.bib): structured primary sources.
+- [Verification](verification/README.md): numerical checks, exact rational
+  identities, dependencies, recorded results and figure code.
+
+## Essential distinctions
+- Discarded and sender-accessible reflection define different channels.
+  A zero channel across Alice/Bob may retain quantum information at Alice.
+- R is reverse power, not amplitude. G is forward power and N is receiver
+  vacuum-output occupation. Vacuum quadrature covariance is I/2.
+- The vacuum zero region is c=N-G >= 0 and (1-eta)c >= eta R, including
+  equality. Collection precedes every usable source operation.
+- The reduced-channel O(R^2) expression is an upper bound. Ideal collection
+  for the stable family has matched Theta(R) order, not a known exact
+  capacity. Logarithmic negativity bounds Q2, not general secret key.
+- All-input converses include squeezed and non-Gaussian signal encodings.
+  A phase-sensitive device or another bath changes the model.
+- Positive-output occupation sums do not count the idler. Per-mode rates
+  do not determine rates per second. Finite-pump and finite-band errors must
+  be controlled relative to the shrinking entanglement margin.
+- Gaussian feedback and amplifier-noise principles are prior art.
+  The related-work account states the limits of the comparison.
