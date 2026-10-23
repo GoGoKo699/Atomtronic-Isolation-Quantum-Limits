@@ -1,0 +1,579 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "checks": {
+    "check_atomic_model.py": {
+      "stable_family": {
+        "carrier_parameters": 6,
+        "frequency_points_per_parameter": 3,
+        "maximum_canonical_completion_error": 2.220446049250313e-15,
+        "minimum_drift_margin_over_kappa": 0.21995156714205633,
+        "analytic_uniform_margin_over_kappa": 0.21995156714205616
+      },
+      "microscopic_m1": {
+        "pair_ac": {
+          "Q": 3,
+          "Omega": 5,
+          "pair_resonances": [
+            [
+              1,
+              2
+            ]
+          ],
+          "normal_resonances": [],
+          "minimum_other_pair_gap": 4,
+          "minimum_normal_gap": 2,
+          "forced_pump_gap": 4
+        },
+        "pair_bc": {
+          "Q": 5,
+          "Omega": 13,
+          "pair_resonances": [
+            [
+              2,
+              3
+            ]
+          ],
+          "normal_resonances": [],
+          "minimum_other_pair_gap": 4,
+          "minimum_normal_gap": 2,
+          "forced_pump_gap": 12
+        },
+        "bragg_ab": {
+          "Q": 2,
+          "Omega": 8,
+          "normal_resonances": [
+            [
+              1,
+              3
+            ]
+          ],
+          "minimum_other_normal_gap": 4
+        }
+      },
+      "microscopic_m11": {
+        "pair_ac": {
+          "Q": 33,
+          "Omega": 605,
+          "pair_resonances": [
+            [
+              11,
+              22
+            ]
+          ],
+          "normal_resonances": [],
+          "minimum_other_pair_gap": 20,
+          "minimum_normal_gap": 22,
+          "forced_pump_gap": 484
+        },
+        "pair_bc": {
+          "Q": 55,
+          "Omega": 1573,
+          "pair_resonances": [
+            [
+              22,
+              33
+            ]
+          ],
+          "normal_resonances": [],
+          "minimum_other_pair_gap": 20,
+          "minimum_normal_gap": 22,
+          "forced_pump_gap": 1452
+        },
+        "bragg_ab": {
+          "Q": 22,
+          "Omega": 968,
+          "normal_resonances": [
+            [
+              11,
+              33
+            ]
+          ],
+          "minimum_other_normal_gap": 44
+        }
+      },
+      "vacuum_budgets": [
+        {
+          "reverse_carrier": 0.0,
+          "intracavity_occupations": [
+            0.09308698197446152,
+            0.16290221845530972,
+            0.255989200429772
+          ],
+          "positive_flux_over_kappa": 0.25598920042977125,
+          "idler_flux_over_kappa": 0.255989200429772,
+          "all_physical_flux_over_kappa": 0.5119784008595433
+        },
+        {
+          "reverse_carrier": 0.01,
+          "intracavity_occupations": [
+            0.08024156433688656,
+            0.1518083649616775,
+            0.2320499292985653
+          ],
+          "positive_flux_over_kappa": 0.23204992929856405,
+          "idler_flux_over_kappa": 0.2320499292985653,
+          "all_physical_flux_over_kappa": 0.4640998585971293
+        },
+        {
+          "reverse_carrier": 0.1,
+          "intracavity_occupations": [
+            0.054710067448118904,
+            0.12550990590132804,
+            0.1802199733494492
+          ],
+          "positive_flux_over_kappa": 0.18021997334944695,
+          "idler_flux_over_kappa": 0.1802199733494492,
+          "all_physical_flux_over_kappa": 0.3604399466988961
+        },
+        {
+          "reverse_carrier": 0.5,
+          "intracavity_occupations": [
+            0.01778349071437524,
+            0.06626166125442268,
+            0.08404515196879703
+          ],
+          "positive_flux_over_kappa": 0.08404515196879792,
+          "idler_flux_over_kappa": 0.08404515196879703,
+          "all_physical_flux_over_kappa": 0.16809030393759494
+        },
+        {
+          "reverse_carrier": 1.0,
+          "intracavity_occupations": [
+            2.220446049250313e-16,
+            4.440892098500626e-16,
+            0.0
+          ],
+          "positive_flux_over_kappa": 6.661338147750939e-16,
+          "idler_flux_over_kappa": 0.0,
+          "all_physical_flux_over_kappa": 6.661338147750939e-16
+        }
+      ],
+      "integrated_vacuum_flux": {
+        "all_physical_flux_over_kappa": 0.5119784008595438,
+        "analytic_flux_over_kappa": 0.5119784008595436,
+        "quadrature_error_estimate": 4.6400791620262094e-14
+      },
+      "centered_carriers": [
+        {
+          "reference_occupation": 0.0,
+          "receiver_occupation": 1.0,
+          "partially_transposed_symplectic_minimum": 0.4999999999999999,
+          "partially_transposed_uncertainty_minimum": 0.0,
+          "maximum_conditional_mean_gain": 0.7071067811865474,
+          "entangled": false,
+          "reverse_carrier": 0.0
+        },
+        {
+          "reference_occupation": 2.525188757862562e-05,
+          "receiver_occupation": 1.0,
+          "partially_transposed_symplectic_minimum": 0.49997474938764025,
+          "partially_transposed_uncertainty_minimum": -2.525061235944322e-05,
+          "maximum_conditional_mean_gain": 0.707097853239713,
+          "entangled": true,
+          "reverse_carrier": 0.0001
+        },
+        {
+          "reference_occupation": 0.0027700831024930483,
+          "receiver_occupation": 1.0,
+          "partially_transposed_symplectic_minimum": 0.49724513736408693,
+          "partially_transposed_uncertainty_minimum": -0.0027548626359131163,
+          "maximum_conditional_mean_gain": 0.7061267297367757,
+          "entangled": true,
+          "reverse_carrier": 0.01
+        },
+        {
+          "reference_occupation": 0.03527226209117251,
+          "receiver_occupation": 0.9999999999999998,
+          "partially_transposed_symplectic_minimum": 0.46698249557677707,
+          "partially_transposed_uncertainty_minimum": -0.03301750442322284,
+          "maximum_conditional_mean_gain": 0.6945242032891394,
+          "entangled": true,
+          "reverse_carrier": 0.1
+        },
+        {
+          "reference_occupation": 0.2991194744794361,
+          "receiver_occupation": 1.0000000000000002,
+          "partially_transposed_symplectic_minimum": 0.30041468089046963,
+          "partially_transposed_uncertainty_minimum": -0.19958531910953012,
+          "maximum_conditional_mean_gain": 0.6475291722642034,
+          "entangled": true,
+          "reverse_carrier": 0.5
+        },
+        {
+          "reference_occupation": 1.0,
+          "receiver_occupation": 1.0,
+          "partially_transposed_symplectic_minimum": 0.08578643762690487,
+          "partially_transposed_uncertainty_minimum": -0.4142135623730957,
+          "maximum_conditional_mean_gain": 0.0,
+          "entangled": true,
+          "reverse_carrier": 1.0
+        }
+      ],
+      "wavepackets": [
+        {
+          "reverse_carrier": 0.0,
+          "sigma_over_kappa": 0.0005,
+          "G_packet": 0.9999936716546374,
+          "R_packet": 4.580080121743157e-13,
+          "R_spectral": 2.499950663130545e-07,
+          "ell_source": 2.500018223550171e-07,
+          "t_packet": 2.5000228036302927e-07,
+          "variance_reflection": 7.214049974748727e-12,
+          "N_receiver": 1.9999883004372165,
+          "canonical_residual": 8.881784197001252e-16,
+          "conditional_centering": {
+            "reference_occupation": 6.250073392166655e-08,
+            "receiver_occupation": 0.9999969608286556,
+            "partially_transposed_symplectic_minimum": 0.5000000624999792,
+            "partially_transposed_uncertainty_minimum": 6.249997941409902e-08,
+            "maximum_conditional_mean_gain": 0.7071050589341662,
+            "entangled": false
+          }
+        },
+        {
+          "reverse_carrier": 0.0,
+          "sigma_over_kappa": 0.002,
+          "G_packet": 0.9998987660893398,
+          "R_packet": 1.171783509384638e-10,
+          "R_spectral": 3.998737488091624e-06,
+          "ell_source": 4.00046640924856e-06,
+          "t_packet": 4.000583587599498e-06,
+          "variance_reflection": 1.8460995078735078e-09,
+          "N_receiver": 1.9998128513011135,
+          "canonical_residual": 4.440892098500626e-16,
+          "conditional_centering": {
+            "reference_occupation": 1.0001878649745777e-06,
+            "receiver_occupation": 0.9999513833865641,
+            "partially_transposed_symplectic_minimum": 0.5000009999947889,
+            "partially_transposed_uncertainty_minimum": 9.999947893078628e-07,
+            "maximum_conditional_mean_gain": 0.7070792298127702,
+            "entangled": false
+          }
+        },
+        {
+          "reverse_carrier": 0.0,
+          "sigma_over_kappa": 0.01,
+          "G_packet": 0.9974815840842784,
+          "R_packet": 7.210578733957853e-08,
+          "R_spectral": 9.921900416133192e-05,
+          "ell_source": 0.00010029524760524211,
+          "t_packet": 0.00010036735339258169,
+          "variance_reflection": 1.1483492312497638e-06,
+          "N_receiver": 1.995349349132056,
+          "canonical_residual": 3.3306690738754696e-16,
+          "conditional_centering": {
+            "reference_occupation": 2.511804103300097e-05,
+            "receiver_occupation": 0.9987910001607552,
+            "partially_transposed_symplectic_minimum": 0.5000249991470258,
+            "partially_transposed_uncertainty_minimum": 2.49991470257879e-05,
+            "maximum_conditional_mean_gain": 0.7064209530446143,
+            "entangled": false
+          }
+        },
+        {
+          "reverse_carrier": 0.0,
+          "sigma_over_kappa": 0.03,
+          "G_packet": 0.9781935758582365,
+          "R_packet": 5.164922799974731e-06,
+          "R_spectral": 0.000841578377813244,
+          "ell_source": 0.0009261483441722618,
+          "t_packet": 0.0009313132669722365,
+          "variance_reflection": 8.973488915899259e-05,
+          "N_receiver": 1.9600761672768376,
+          "canonical_residual": 8.881784197001252e-16,
+          "conditional_centering": {
+            "reference_occupation": 0.00023493984255662514,
+            "receiver_occupation": 0.9895605050425926,
+            "partially_transposed_symplectic_minimum": 0.5002263725993936,
+            "partially_transposed_uncertainty_minimum": 0.0002263725993940343,
+            "maximum_conditional_mean_gain": 0.70113873997881,
+            "entangled": false
+          }
+        },
+        {
+          "reverse_carrier": 0.01,
+          "sigma_over_kappa": 0.0005,
+          "G_packet": 0.9999943009480262,
+          "R_packet": 0.010000069044257287,
+          "R_spectral": 0.01000024247925078,
+          "ell_source": 1.7343910418965436e-07,
+          "t_packet": 0.010000242483361477,
+          "variance_reflection": 4.110697893189297e-12,
+          "N_receiver": 1.799990453461217,
+          "canonical_residual": 4.440892098500626e-16,
+          "conditional_centering": {
+            "reference_occupation": 0.0027701559911449403,
+            "receiver_occupation": 0.9999968995692192,
+            "partially_transposed_symplectic_minimum": 0.49724511327175447,
+            "partially_transposed_uncertainty_minimum": -0.002754886728245373,
+            "maximum_conditional_mean_gain": 0.7061250763716697,
+            "entangled": true
+          },
+          "recovery_gain": 360.9958574089989,
+          "recovery_noise": 359.9958779632071,
+          "recovery_positive_noise": 2.0554208107206923e-05,
+          "recovery_non_EB": true
+        },
+        {
+          "reverse_carrier": 0.01,
+          "sigma_over_kappa": 0.002,
+          "G_packet": 0.9999088308878589,
+          "R_packet": 0.010001104351732291,
+          "R_spectral": 0.010003878570616001,
+          "ell_source": 2.7752714926165822e-06,
+          "t_packet": 0.010003879623224908,
+          "variance_reflection": 1.0526089062878885e-09,
+          "N_receiver": 1.7998472876125218,
+          "canonical_residual": 6.661338147750939e-16,
+          "conditional_centering": {
+            "reference_occupation": 0.0027712493086442525,
+            "receiver_occupation": 0.9999504024439281,
+            "partially_transposed_symplectic_minimum": 0.497244752206695,
+            "partially_transposed_uncertainty_minimum": -0.002755247793305095,
+            "maximum_conditional_mean_gain": 0.7061002799219683,
+            "entangled": true
+          },
+          "recovery_gain": 360.93374182164297,
+          "recovery_noise": 359.9340707537285,
+          "recovery_positive_noise": 0.00032893208553741806,
+          "recovery_non_EB": true
+        },
+        {
+          "reverse_carrier": 0.01,
+          "sigma_over_kappa": 0.01,
+          "G_packet": 0.9977307459875525,
+          "R_packet": 0.010027382694879055,
+          "R_spectral": 0.01009626868590363,
+          "ell_source": 6.954244884394001e-05,
+          "t_packet": 0.010096925143722995,
+          "variance_reflection": 6.564578193656717e-07,
+          "N_receiver": 1.7962026326231992,
+          "canonical_residual": 4.440892098500626e-16,
+          "conditional_centering": {
+            "reference_occupation": 0.0027992318492681134,
+            "receiver_occupation": 0.9987659821075905,
+            "partially_transposed_symplectic_minimum": 0.49723571295527275,
+            "partially_transposed_uncertainty_minimum": -0.002764287044727485,
+            "maximum_conditional_mean_gain": 0.7054680393839472,
+            "entangled": true
+          },
+          "recovery_gain": 359.3582730377293,
+          "recovery_noise": 358.36653811510666,
+          "recovery_positive_noise": 0.008265077377509672,
+          "recovery_non_EB": true
+        },
+        {
+          "reverse_carrier": 0.01,
+          "sigma_over_kappa": 0.03,
+          "G_packet": 0.9802721397933927,
+          "R_packet": 0.01023069324314199,
+          "R_spectral": 0.01081833657526542,
+          "ell_source": 0.0006399453249046338,
+          "t_packet": 0.010870638568046624,
+          "variance_reflection": 5.230199278120386e-05,
+          "N_receiver": 1.7672436524815627,
+          "canonical_residual": 1.3322676295501878e-15,
+          "conditional_centering": {
+            "reference_occupation": 0.0030328262871768263,
+            "receiver_occupation": 0.9893050955024669,
+            "partially_transposed_symplectic_minimum": 0.49717552336168885,
+            "partially_transposed_uncertainty_minimum": -0.002824476638311435,
+            "maximum_conditional_mean_gain": 0.7003767145321135,
+            "entangled": true
+          },
+          "recovery_gain": 347.22665781002144,
+          "recovery_noise": 346.30436754368054,
+          "recovery_positive_noise": 0.07770973365919903,
+          "recovery_non_EB": true
+        },
+        {
+          "reverse_carrier": 0.1,
+          "sigma_over_kappa": 0.0005,
+          "G_packet": 0.9999956377964218,
+          "R_packet": 0.09999989135983431,
+          "R_spectral": 0.09999995357748062,
+          "ell_source": 6.22183016218969e-08,
+          "t_packet": 0.09999995357813593,
+          "variance_reflection": 6.553091402849986e-13,
+          "N_receiver": 1.36753876874653,
+          "canonical_residual": 1.9984014443252818e-15,
+          "conditional_centering": {
+            "reference_occupation": 0.03527227956345602,
+            "receiver_occupation": 0.9999969238597195,
+            "partially_transposed_symplectic_minimum": 0.46698238905889594,
+            "partially_transposed_uncertainty_minimum": -0.03301761094110352,
+            "maximum_conditional_mean_gain": 0.6945227627288043,
+            "entangled": true
+          },
+          "recovery_gain": 28.350836860687,
+          "recovery_noise": 27.35083689338309,
+          "recovery_positive_noise": 3.2696100020134776e-08,
+          "recovery_non_EB": true
+        },
+        {
+          "reverse_carrier": 0.1,
+          "sigma_over_kappa": 0.002,
+          "G_packet": 0.9999302136502822,
+          "R_packet": 0.09999826160875983,
+          "R_spectral": 0.09999925701327984,
+          "ell_source": 9.955719137977326e-07,
+          "t_packet": 0.09999925718067362,
+          "variance_reflection": 1.6739377939334332e-10,
+          "N_receiver": 1.3674532948336648,
+          "canonical_residual": 8.881784197001252e-16,
+          "conditional_centering": {
+            "reference_occupation": 0.035272541552515135,
+            "receiver_occupation": 0.9999507888621157,
+            "partially_transposed_symplectic_minimum": 0.46698079178411017,
+            "partially_transposed_uncertainty_minimum": -0.03301920821588962,
+            "maximum_conditional_mean_gain": 0.6945011570080686,
+            "entangled": true
+          },
+          "recovery_gain": 28.350049537163354,
+          "recovery_noise": 27.35005006858487,
+          "recovery_positive_noise": 5.314215094908968e-07,
+          "recovery_non_EB": true
+        },
+        {
+          "reverse_carrier": 0.1,
+          "sigma_over_kappa": 0.01,
+          "G_packet": 0.9982610061563911,
+          "R_packet": 0.09995644605683199,
+          "R_spectral": 0.09998128188518411,
+          "ell_source": 2.494152149190576e-05,
+          "t_packet": 0.0999813875783239,
+          "variance_reflection": 1.0569313978192607e-07,
+          "N_receiver": 1.3652742841156904,
+          "canonical_residual": 1.1102230246251565e-16,
+          "conditional_centering": {
+            "reference_occupation": 0.03527918889247006,
+            "receiver_occupation": 0.9987742394792336,
+            "partially_transposed_symplectic_minimum": 0.4669402150544129,
+            "partially_transposed_uncertainty_minimum": -0.03305978494558676,
+            "maximum_conditional_mean_gain": 0.6939497533561524,
+            "entangled": true
+          },
+          "recovery_gain": 28.329992878690764,
+          "recovery_noise": 27.330011463830502,
+          "recovery_positive_noise": 1.8585139740290044e-05,
+          "recovery_non_EB": true
+        },
+        {
+          "reverse_carrier": 0.1,
+          "sigma_over_kappa": 0.03,
+          "G_packet": 0.9847515162414392,
+          "R_packet": 0.09960153229328764,
+          "R_spectral": 0.09982167685752485,
+          "ell_source": 0.0002293747175265981,
+          "t_packet": 0.09983090701081423,
+          "variance_reflection": 9.23015328938015e-06,
+          "N_receiver": 1.3477604605671656,
+          "canonical_residual": 1.1102230246251565e-15,
+          "conditional_centering": {
+            "reference_occupation": 0.035330860949962406,
+            "receiver_occupation": 0.9892881522362929,
+            "partially_transposed_symplectic_minimum": 0.46662460741077466,
+            "partially_transposed_uncertainty_minimum": -0.03337539258922519,
+            "maximum_conditional_mean_gain": 0.6894754309038302,
+            "entangled": true
+          },
+          "recovery_gain": 28.169748109424095,
+          "recovery_noise": 27.17031127625635,
+          "recovery_positive_noise": 0.0005631668322476032,
+          "recovery_non_EB": true
+        }
+      ]
+    },
+    "check_collection_thermal.py": {
+      "passed": true,
+      "check": "collection_thermal",
+      "seed": 9242026,
+      "samples_per_negative_mode_count": 70,
+      "negative_mode_counts": [
+        1,
+        2,
+        4
+      ],
+      "efficiencies": [
+        0.0,
+        0.03,
+        0.37,
+        0.9,
+        1.0
+      ],
+      "signal_occupations": [
+        0.01,
+        0.4,
+        2.0
+      ],
+      "channel_cases": 1050,
+      "finite_energy_cases": 3150,
+      "positive_capacity_cases": 290,
+      "tolerances": {
+        "absolute": 1e-10,
+        "sign_decision": 1e-08,
+        "singular_optimizer": 1e-11
+      },
+      "max_absolute_errors": {
+        "canonical_quadrature": 8.881784197001252e-16,
+        "full_cp_spectrum": 3.552713678800501e-15,
+        "feedback_schur": 1.2756462552943049e-13,
+        "finite_energy_npt_gap": 2.1005419625907962e-13
+      }
+    },
+    "check_collection_vacuum.py": {
+      "cases": 1530,
+      "max_spectrum_error": 1.7763568394002505e-14,
+      "criterion": "N>=G and (1-efficiency)*(N-G)>=efficiency*R"
+    },
+    "check_rates.py": {
+      "conditional_covariance_cases": 80,
+      "maximum_covariance_or_entropy_spectrum_error": 2.531308496145357e-14,
+      "exact_rational_polynomial_cases": 30,
+      "finite_choi_limit_checks": [
+        {
+          "R": 0.0001,
+          "finite_n_10000": 0.0002884536261474381,
+          "limit": 0.00028851073497316606
+        },
+        {
+          "R": 0.01,
+          "finite_n_10000": 0.028619713788838975,
+          "limit": 0.028624834491440772
+        },
+        {
+          "R": 0.1,
+          "finite_n_10000": 0.27698922420762284,
+          "limit": 0.2770275849923219
+        },
+        {
+          "R": 0.25,
+          "finite_n_10000": 0.6941612751344937,
+          "limit": 0.6942419136306174
+        },
+        {
+          "R": 0.81,
+          "finite_n_10000": 3.198129012847451,
+          "limit": 3.1985498359337536
+        }
+      ],
+      "example_R_0.01": {
+        "reduced_upper_bound": 7.261928622544256e-05,
+        "ideal_collection_lower_bound": 0.002772854521658097,
+        "ideal_collection_upper_bound": 0.028624834491440772,
+        "collection_threshold": 0.9876543209876543
+      },
+      "status": "PASS"
+    },
+    "check_scattering.py": {
+      "random_canonical_cases": 2000,
+      "maximum_saturator_residual": 3.552713678800501e-15,
+      "minimum_total_noise_slack": 0.0756250697692914,
+      "passive_extra_port_counterexample": "PASS",
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}
