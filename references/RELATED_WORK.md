@@ -114,7 +114,7 @@ Together these establish $`Q_2(R)=\Theta(R)`$ for that ideal-access family as $`
 
 ## 7. Noise-synthesis priority qualification
 
-[Petersen et al. (2019)](https://doi.org/10.2514/6.2019-0952), `Petersen2019`, and [Petersen et al. (2020)](https://doi.org/10.1109/CDC42340.2020.9304063), `Petersen2020`, specifically address nonreciprocal phase-insensitive amplifier synthesis and minimum noise. Their complete theorem statements have not been compared with the scalar total-spontaneous-emission inequality in this repository. **No priority claim is made for that scalar noise inequality or its three-quanta unit-forward endpoint.**
+[Petersen et al. (2019)](https://doi.org/10.2514/6.2019-0952), `Petersen2019`, and [Petersen et al. (2020)](https://doi.org/10.1109/CDC42340.2020.9304063), `Petersen2020`, specifically address nonreciprocal phase-insensitive amplifier synthesis and minimum noise. Their complete theorem statements have not been compared with this repository's scalar inequality for the summed spontaneous occupation of the two positive-signature outputs. **No priority claim is made for that scalar noise inequality or its three-quanta positive-output endpoint at unit forward power and zero reverse power.**
 
 The operational scattering/access boundary and the monitored-versus-discarded communication comparison should be assessed separately from the scalar-noise result. This reference note documents concrete relationships and assumptions; it is not a certification that no earlier formulation of the operational result exists.
 

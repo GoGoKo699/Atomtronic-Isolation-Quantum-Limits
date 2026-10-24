@@ -238,7 +238,7 @@ The map has **13 background/preliminaries milestones** and **17 narrative/innova
 
 **Central question:** Is minimizing receiver noise the same optimization as minimizing total positive-output noise?
 
-**Understanding target:** Compare the two explicit saturating families, recognize the source-noise divergence of the receiver-optimal family near isolation, and include the idler when counting all emitted particles.
+**Understanding target:** Compare the two explicit saturating families, recognize the source-noise divergence of the receiver-optimal family as reverse power tends to zero at fixed nonzero forward power, and include the idler when summing occupations over all physical outputs.
 
 **Dependencies:** M14.
 
